@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TartagalGo - Tu marketplace de Tartagal</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark tg-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="logo-pill">TG</span>
+        <span class="brand-text">TartagalGo</span>
+      </a>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#locales">Locales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <span class="pill-live">
+              <span class="dot-live"></span>
+              Tartagal · Online
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-section" id="inicio">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <span class="eyebrow">Marketplace local</span>
+          <h1 class="hero-title">
+            Tus pedidos de <span class="accent">Tartagal</span><br />
+            en un solo lugar.
+          </h1>
+          <p class="hero-subtitle">
+            Conectá con Tanito, ABY, Turco y los próximos locales de Tartagal desde una sola web.
+            Pedidos rápidos, claros y sin perderte entre enlaces.
+          </p>
+          <div class="hero-actions">
+            <a href="#locales" class="btn-main">
+              Ver locales
+              <span class="btn-icon">↓</span>
+            </a>
+            <a href="#como-funciona" class="btn-ghost">
+              Cómo funciona
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span>+3 locales activos</span>
+            <span>Diseñado y desarrollado por Facu</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-card">
+            <div class="badge-top">
+              <span class="dot-live"></span>
+              Live preview
+            </div>
+            <h2>Un panel, varias webs</h2>
+            <p>
+              TartagalGo funciona como un hub: seleccionás un local y saltás directo a su sitio oficial
+              para terminar el pedido con sus propias herramientas (carrito, WhatsApp, etc.).
+            </p>
+            <div class="hero-grid">
+              <div class="mini-card">
+                <span class="tag">Comidas</span>
+                <h3>Tanito</h3>
+                <p>Hamburguesas, pizzas y combos listos para la noche.</p>
+              </div>
+              <div class="mini-card">
+                <span class="tag">Pizzas & Más</span>
+                <h3>ABY</h3>
+                <p>Pizzas, sándwiches y hamburguesas con menú semanal.</p>
+              </div>
+              <div class="mini-card">
+                <span class="tag">Supermercado</span>
+                <h3>Turco</h3>
+                <p>Carrito completo para tus compras grandes.</p>
+              </div>
+              <div class="mini-card muted">
+                <span class="tag upcoming">Próximamente</span>
+                <h3>Tu negocio merece estar acá</h3>
+                <p>Mostrá tu menú, tus productos y tus promociones en TartagalGo. Sumate y hacé que más clientes te elijan todos los días.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Locales -->
+  <section id="locales" class="section-padding">
+    <div class="container">
+      <div class="section-header d-flex flex-wrap justify-content-between align-items-end gap-2">
+        <div>
+          <p class="section-kicker">Locales conectados</p>
+          <h2 class="section-title">Elegí dónde querés pedir hoy</h2>
+        </div>
+        <p class="section-subtitle">
+          Cada card te lleva a la web oficial del comercio. Todo abre en una nueva pestaña para no perder TartagalGo.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Tanito -->
+        <div class="col-md-4">
+          <article class="local-card">
+            <div class="local-tag-row">
+              <span class="tag">Comida rápida</span>
+              <span class="pill-highlight">Tanito</span>
+            </div>
+            <h3 class="local-title">Tanito</h3>
+            <p class="local-desc">
+              Hamburguesas, pizzas, nuggets y combos potentes para cuando pinta algo bien power.
+            </p>
+            <ul class="local-meta">
+              <li>Pedidos por WhatsApp</li>
+              <li>Menú sencillo y directo</li>
+            </ul>
+            <div class="local-footer">
+              <a
+                href="https://tanito.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+              >
+                Ir a la web
+                <span class="btn-icon">↗</span>
+              </a>
+              <span class="hint">Se abre en otra pestaña</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ABY -->
+        <div class="col-md-4">
+          <article class="local-card">
+            <div class="local-tag-row">
+              <span class="tag">Pizzas & sándwiches</span>
+              <span class="pill-highlight">ABY</span>
+            </div>
+            <h3 class="local-title">ABY</h3>
+            <p class="local-desc">
+              Pizzas, sándwiches y hamburguesas con precios claros, menú semanal y promos bien visibles.
+            </p>
+            <ul class="local-meta">
+              <li>Sección menú semanal</li>
+              <li>Promos destacadas</li>
+            </ul>
+            <div class="local-footer">
+              <a
+                href="https://proyecto-aby.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+              >
+                Ir a la web
+                <span class="btn-icon">↗</span>
+              </a>
+              <span class="hint">Se abre en otra pestaña</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Turco -->
+        <div class="col-md-4">
+          <article class="local-card">
+            <div class="local-tag-row">
+              <span class="tag">Supermercado</span>
+              <span class="pill-highlight">+10.000 productos</span>
+            </div>
+            <h3 class="local-title">Turco</h3>
+            <p class="local-desc">
+              Supermercado completo con carrito, flujo de pago por transferencia y envío del comprobante por WhatsApp.
+            </p>
+            <ul class="local-meta">
+              <li>Carrito de compras</li>
+              <li>Pago por transferencia y QR</li>
+            </ul>
+            <div class="local-footer">
+              <a
+                href="https://proyecto-turco.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+              >
+                Ir a la web
+                <span class="btn-icon">↗</span>
+              </a>
+              <span class="hint">Se abre en otra pestaña</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="como-funciona" class="section-padding section-alt">
+    <div class="container">
+      <div class="section-header d-flex flex-wrap justify-content-between align-items-end gap-2">
+        <div>
+          <p class="section-kicker">Flujo simple</p>
+          <h2 class="section-title">Cómo funciona TartagalGo</h2>
+        </div>
+        <!-- texto lateral eliminado -->
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <h3>Entrás a TartagalGo</h3>
+            <p>Desde tu celu o PC, abrís TartagalGo y ves todos los locales disponibles en Tartagal.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <h3>Elegís el local</h3>
+            <p>Seleccionás si querés comida rápida, pizza o hacer las compras del mes en el súper.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <h3>Terminás el pedido en su web</h3>
+            <p>TartagalGo te redirige a la web del local para que uses su sistema (carrito, WhatsApp, etc.).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / CTA para futuros clientes -->
+  <section id="contacto" class="section-padding contact-strip">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <p class="section-kicker">¿Sos de Tartagal y tenés un negocio?</p>
+          <h2 class="section-title mb-3">Sumá tu local a TartagalGo</h2>
+          <p class="section-subtitle mb-1">
+            Hacé crecer tu negocio sumándolo a TartagalGo. Tu local puede tener presencia online con una web moderna, rápida y fácil de usar. Sumate a la plataforma y dejá que más clientes te encuentren desde un solo lugar.
+          </p>
+          <p class="section-subtitle mb-0">
+            WhatsApp / Teléfono: <strong>3873520629</strong>
+          </p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <a
+            href="https://wa.me/543873520629?text=Hola%2C%20te%20hablo%20desde%20TartagalGo%20y%20me%20gustar%C3%ADa%20que%20mi%20negocio%20aparezca%20tambi%C3%A9n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-main large"
+          >
+            Escribir por WhatsApp
+            <span class="btn-icon">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span>© <span id="year"></span> TartagalGo · Todos los derechos reservados.</span>
+      <span>Desarrollado por Facu · Web dev</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
