@@ -13,11 +13,6 @@
   --radius-lg: 22px;
   --radius-md: 18px;
   --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.9);
-
-  /* Glow dinámico */
-  --cursor-x: 50%;
-  --cursor-y: 50%;
-  --cursor-active: 0;
 }
 
 *,
@@ -31,26 +26,6 @@ body {
   background: radial-gradient(circle at top, #171821 0, #050608 55%, #020205 100%);
   color: var(--text-main);
   min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Glow sutil que sigue al puntero / dedo */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      circle at var(--cursor-x) var(--cursor-y),
-      rgba(255, 107, 61, 0.18),
-      transparent 55%
-    );
-  mix-blend-mode: screen;
-  opacity: var(--cursor-active);
-  transition: opacity 0.4s ease-out;
-  z-index: 0;
 }
 
 /* Navbar */
@@ -58,8 +33,6 @@ body::before {
   background: rgba(5, 6, 10, 0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-soft);
-  position: relative;
-  z-index: 1;
 }
 
 .navbar .nav-link {
@@ -84,7 +57,6 @@ body::before {
   font-size: 0.85rem;
   color: #fff;
   box-shadow: 0 0 18px rgba(255, 107, 61, 0.7);
-  animation: softGlow 3s ease-in-out infinite alternate;
 }
 
 .brand-text {
@@ -110,36 +82,12 @@ body::before {
   border-radius: 999px;
   background: #38b000;
   box-shadow: 0 0 12px rgba(56, 176, 0, 0.9);
-  animation: dotPulse 1.8s ease-in-out infinite alternate;
-}
-
-/* Pequeñas animaciones de brillo */
-@keyframes softGlow {
-  from {
-    box-shadow: 0 0 10px rgba(255, 107, 61, 0.45);
-  }
-  to {
-    box-shadow: 0 0 22px rgba(255, 107, 61, 0.9);
-  }
-}
-
-@keyframes dotPulse {
-  from {
-    transform: scale(1);
-    box-shadow: 0 0 8px rgba(56, 176, 0, 0.7);
-  }
-  to {
-    transform: scale(1.25);
-    box-shadow: 0 0 16px rgba(56, 176, 0, 1);
-  }
 }
 
 /* Hero */
 .hero-section {
   padding-top: 6rem;
   padding-bottom: 3.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 @media (min-width: 992px) {
@@ -286,7 +234,6 @@ body::before {
   box-shadow: var(--shadow-soft);
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .hero-card::before {
@@ -296,12 +243,6 @@ body::before {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 40%, transparent 60%, rgba(255, 255, 255, 0.02));
   mix-blend-mode: soft-light;
   pointer-events: none;
-}
-
-.hero-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.95);
-  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .hero-card > * {
@@ -345,7 +286,6 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.75rem 0.8rem;
   font-size: 0.8rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .mini-card.muted {
@@ -361,12 +301,6 @@ body::before {
 .mini-card p {
   font-size: 0.76rem;
   margin-bottom: 0;
-}
-
-.mini-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.26);
-  background: rgba(15, 16, 26, 0.98);
 }
 
 .tag {
@@ -389,8 +323,6 @@ body::before {
 /* Sections */
 .section-padding {
   padding: 3rem 0;
-  position: relative;
-  z-index: 1;
 }
 
 @media (min-width: 992px) {
@@ -442,16 +374,13 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .local-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 26px 56px rgba(0, 0, 0, 0.95);
   border-color: rgba(255, 255, 255, 0.22);
-  background:
-    radial-gradient(circle at top right, rgba(255, 107, 61, 0.18), transparent 60%),
-    var(--card-bg);
 }
 
 .local-tag-row {
@@ -520,7 +449,6 @@ body::before {
   padding: 1.1rem 1rem;
   height: 100%;
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.8);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .step-number {
@@ -548,12 +476,6 @@ body::before {
   margin-bottom: 0;
 }
 
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.95);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
 /* Contact strip */
 .contact-strip {
   background:
@@ -571,8 +493,6 @@ body::before {
   color: var(--text-muted);
   border-top: 1px solid var(--border-soft);
   margin-top: 0;
-  position: relative;
-  z-index: 1;
 }
 
 /* Utilities */
@@ -584,18 +504,6 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-}
-
-/* Animación de aparición suave al hacer scroll */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* ====== RESPONSIVE ====== */
